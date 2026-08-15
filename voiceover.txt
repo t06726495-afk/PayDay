@@ -1,0 +1,103 @@
+COMPOUND GROWTH — VOICEOVER SCRIPT
+Total runtime 42.0 s. Written to sit under the animation, not over it.
+Target read: calm, unhurried, ~140 words per minute. 137 words total.
+
+Two versions below. Use PLAIN TEXT for ElevenLabs. The TIMED version is the
+same script with cue points, for checking sync against the video.
+
+
+=============================================================================
+PLAIN TEXT  —  paste this into ElevenLabs
+=============================================================================
+
+Allowance. Yard work. A summer job. Twenty dollars a month.
+
+Most of that money ends up somewhere like this. A jar. A drawer. An account
+that does nothing. It just sits there, and twenty dollars a month stays twenty
+dollars a month.
+
+But put the same twenty somewhere it can grow, and something different starts
+happening.
+
+Year one, almost nothing. Two hundred and fifty dollars, versus two hundred
+and forty. Ten dollars apart.
+
+Year five, still small. Year ten, the gap opens up.
+
+And then it really starts to move. Because the growth is growing too.
+
+Thirty years. The same twenty dollars a month, every month.
+
+In a jar, seventy-two hundred dollars. Invested, around twenty-four thousand.
+
+You put in the same money either way. About seventeen thousand of that is
+growth.
+
+Twenty dollars a month. Time does the heavy lifting.
+
+
+=============================================================================
+TIMED  —  cue points against the animation
+=============================================================================
+
+[0.6 – 3.4]   HOOK — coins land, headline reads "Put $20 a month here instead"
+  "Allowance. Yard work. A summer job. Twenty dollars a month."
+
+[4.2 – 7.2]   SETUP — the jar fills, flat and even
+  "Most of that money ends up somewhere like this. A jar. A drawer. An account
+   that does nothing. It just sits there, and twenty dollars a month stays
+   twenty dollars a month."
+
+[7.6 – 10.6]  SETUP — the bars on the right start climbing
+  "But put the same twenty somewhere it can grow, and something different
+   starts happening."
+
+[11.6 – 15.0] TIME-LAPSE — sweep to year 1, marker lands at $250
+  "Year one, almost nothing. Two hundred and fifty dollars, versus two hundred
+   and forty. Ten dollars apart."
+  (beat on the year-1 marker at 12.4)
+
+[16.0 – 20.5] TIME-LAPSE — year 5 marker at 16.9, year 10 marker at 20.8
+  "Year five, still small. Year ten, the gap opens up."
+
+[22.0 – 25.5] TIME-LAPSE — the curve bends hard, year 20 lands at 25.8
+  "And then it really starts to move. Because the growth is growing too."
+
+[28.0 – 30.8] TIME-LAPSE — final sweep, year 30 marker lands at 31.0
+  "Thirty years. The same twenty dollars a month, every month."
+
+[32.4 – 36.0] PAYOFF — the two endpoint figures arrive
+  "In a jar, seventy-two hundred dollars. Invested, around twenty-four
+   thousand."
+
+[36.2 – 39.0] PAYOFF — the gap arrow and "$17,000 of this is growth"
+  "You put in the same money either way. About seventeen thousand of that is
+   growth."
+
+[39.9 – 41.8] END CARD
+  "Twenty dollars a month. Time does the heavy lifting."
+
+
+=============================================================================
+NOTES
+=============================================================================
+
+Compliance: the script never says "you will have" or "you'll earn". Every
+figure is stated as what the illustration shows. The video carries the
+"hypothetical 7% average annual growth rate" label on screen for the whole
+chart section and on the end card, so the narration does not need to repeat
+it — but if you want it spoken, the cleanest place is after the year-30 line:
+
+  "…every month, at a hypothetical seven percent average annual growth rate."
+
+That adds roughly 2.5 s, so stretch LAPSE_STEPS or trim the year 5 / year 10
+line if you add it.
+
+Delivery: let the silences sit. There is deliberate space at 3.4–4.2 (scene
+change), 15.0–16.0 (year-1 beat), 25.5–28.0 (the curve accelerating) and
+31.0–32.4 (the chart settling). Those gaps are where the animation does the
+talking.
+
+Voice: something warm and conversational rather than newsreader. A slightly
+lower pitch on "It just sits there" and a lift on "something different starts
+happening" gives the piece its turn.

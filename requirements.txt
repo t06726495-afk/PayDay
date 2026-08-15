@@ -1,0 +1,2 @@
+matplotlib>=3.7
+imageio-ffmpeg>=0.4.9

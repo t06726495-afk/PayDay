@@ -1,120 +1,143 @@
-# PAYDAY
+# Compound growth explainer
 
-A daily guessing game. You get a real athlete, a real season, two or three stat lines,
-and five guesses at what they actually earned. The hook is that historical salaries are
-shockingly low and inflation makes everyone's intuition wrong.
+A 42-second flat-diagram animation showing what $20 a month does over 30 years
+when it sits in a jar versus when it's invested — plus a matching voiceover
+script for ElevenLabs.
 
-Vite + React + TypeScript. No backend, no component library, no player photos.
+Rendered with **matplotlib** (not manim). For this style — flat shapes, exact
+type placement, an axis that re-scales under the curve — matplotlib gives
+frame-accurate control with no scene-graph fighting, and every position in the
+file is a number you can nudge. Manim's strengths (LaTeX, 3D, mobject
+transforms) aren't in play here.
 
 ```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # regenerates NEEDS_VERIFICATION.md, typechecks, builds to dist/
-npm run preview  # serve the production build
-npm run verify   # regenerate NEEDS_VERIFICATION.md on its own
+pip install matplotlib imageio-ffmpeg
+
+python3 render_video.py                 # 1920x1080 -> out/compound_growth_16x9.mp4
+python3 render_video.py --aspect 9:16   # 1080x1920 -> out/compound_growth_9x16.mp4
 ```
 
-## The five modes
+Roughly 80 s to render per aspect. No system ffmpeg needed — `imageio-ffmpeg`
+ships its own binary and the script points matplotlib at it.
 
-| Mode | League | Entries |
+## Previewing while you tweak
+
+```bash
+python3 render_video.py --stills 1.8 7.5 13 22 30 36.8 41   # PNGs, no encode
+python3 render_video.py --scale 0.5                          # half-res draft
+```
+
+`--stills` is the fast loop: it renders single frames at the times you name,
+straight to `out/`, in about a second each.
+
+## The 42 seconds
+
+| Time | Scene | What happens |
 | --- | --- | --- |
-| The Diamond | MLB | 51 |
-| The Hardwood | NBA | 42 |
-| The Gridiron | NFL | 34 |
-| The Pitch | World football | 39 |
-| The Mixer | all four, shuffled | 166 |
+| 0.0 – 3.6 | Hook | Coins and a bill drop in. "Put $20 a month **here instead**." |
+| 3.6 – 11.0 | Setup | $20/month forks two ways: a jar that fills flat, bars that climb. |
+| 11.0 – 31.0 | Time-lapse | The chart sweeps year by year. Markers land on years 1, 5, 10, 20, 30. |
+| 31.0 – 39.4 | Payoff | Both endpoints labelled, and the gap between the lines called out. |
+| 39.4 – 42.0 | End card | "$20 a month. Time does the heavy lifting." No CTA — that's yours to add. |
 
-Each mode keeps its own streak, history and in-progress round in `localStorage` under
-`payday:v1:*`.
+The time-lapse is the piece worth understanding. It doesn't scroll at a
+constant rate: it **sweeps to a year, holds, then zooms the camera out** while
+the next sweep begins. Year 1 is drawn on a $300 axis, year 30 on a $26,000
+axis. That's what sells the acceleration — the curve keeps filling the frame,
+so the only way to read "faster" is off the axis numbers changing underneath
+it. Two knobs control it:
 
-## Daily puzzle determinism
-
-`src/lib/daily.ts` derives everything from the **UTC** date, so the same puzzle is live
-everywhere on earth at any instant. `Math.random()` is never involved.
-
-```
-dateKey()        → "2026-08-07"           (UTC, not local)
-puzzleNumberFor  → days since 2026-08-01, 1-indexed
-playerForPuzzle  → seededShuffle(pool, `payday|${mode}|cycle:${n}|v1`)[index]
-```
-
-The pool is re-shuffled once per full cycle, so no player repeats until every other
-player in that mode has been used. The PRNG is FNV-1a → mulberry32 (`src/lib/prng.ts`),
-pure uint32 maths, identical in every engine.
-
-Changing the launch date, or the `|v1` seed suffix, reshuffles every future puzzle.
-
-## Rules
-
-- **5 guesses.** A guess within **10%** solves the round.
-- **Feedback** on every miss: direction (↑ HIGHER / ↓ LOWER) plus heat —
-  WARM ≤25%, COOL ≤50%, COLD ≤100%, FROZEN beyond. SCORCHING (≤10%) *is* the solve.
-- **Hint** after guess 3: that league's average salary that season.
-- **Score** out of 1400 — 400 for solving, up to 600 for closeness inside the solve
-  band, 80 per unused guess. A solve in 2 at 4% error scores 1080; the same solve at
-  9% error scores 780.
-
-One deliberate deviation from the brief: the brief's scoring example implies a solve
-can carry 22% error, but the share legend requires yellow/WARM to be a *non-winning*
-state. Those two can't both hold, so the solve band is 10% and `SOLVE_THRESHOLD` in
-`src/lib/scoring.ts` is a one-line change if you want it wider.
-
-## Share string
-
-Emoji only, no spoilers. Blue = frozen/cold/cool, yellow = warm, green = solve.
-
-```
-PAYDAY #47 ⚾ The Diamond
-🟦🟦🟨🟩 4/5
-payday.game
+```python
+LAPSE_STEPS = [(1, 1.4, 0.9), (5, 2.6, 0.9), ...]   # (year, sweep secs, hold secs)
+VIEWS = [(1.5, 300, [...], [...]), ...]              # (x max, y max, x ticks, y ticks)
+CAMERA_LEAD = 0.45   # how far the zoom-out bleeds into the next sweep
 ```
 
-A bust appends ❌ and reads `X/5`. The domain lives in one place: `SHARE_URL` in
-`src/lib/share.ts`.
+One entry in each, per beat. The scene runs exactly `sum(sweep + hold)` seconds,
+so if you change them, move `LAPSE_OUT` / `PAYOFF_IN` to match.
 
-## Data
+## The numbers
 
-Everything is in `src/data/players.ts`. 166 entries across four sports, balanced across
-four eras (pre-1980, 1980-1999, 2000-2014, 2015-present).
+$20/month, contributed at the end of each month, compounded monthly at a
+**hypothetical 7% average annual rate**, for 30 years.
 
-Every entry carries a `source` and a `confidence` rating. Nothing was invented to fill a
-slot. Read [NEEDS_VERIFICATION.md](./NEEDS_VERIFICATION.md) before trusting any figure —
-it is regenerated from the data on every build and lists all 55 low-confidence entries
-with what needs checking.
+| | Year 1 | Year 5 | Year 10 | Year 20 | Year 30 |
+| --- | --- | --- | --- | --- | --- |
+| In a jar | $240 | $1,200 | $2,400 | $4,800 | $7,200 |
+| Invested | $250 | $1,430 | $3,460 | $10,420 | $24,400 |
 
-Soccer wages reported weekly in GBP/EUR are annualised and converted to USD, with the
-original figure and rate kept in `source`. None is rated above `medium`.
+Every figure on screen is rounded to the nearest $10 by `money()`, so nothing
+implies precision the illustration doesn't have. The jar line is just the
+running total of contributions, which is also exactly what you paid in — that's
+why the payoff can say $17,000 of the $24,400 is growth.
 
-### Dev panel
+Rate and contribution live at the top of the file:
 
-Append `?dev=1` to the URL. Gives you a **verified data only** toggle that drops every
-`confidence: 'low'` entry from the daily selection (111 entries remain, and today's
-puzzle changes accordingly), an answer reveal, and a progress reset. The flag persists
-in `localStorage` once set, and the panel has its own hide button.
+```python
+MONTHLY = 20.0
+RATE = 0.07
+YEARS = 30
+```
 
-## Design
+Changing `RATE` or `MONTHLY` updates the curve and every label automatically,
+but **`VIEWS` is hand-tuned to these numbers** — if you change them
+substantially, re-pick the five y-maxima so each sweep still ends with the
+curve near the top of the frame.
 
-Banking stationery: pay stubs, ledger books, check safety paper, bank stamps.
+### On not making promises
 
-- **Palette** — safety-paper pale green, ledger off-white, ink black, faded bank-stamp
-  red for misses, muted navy for cold feedback. No neon, no gradient accents.
-- **Type, three faces with one job each** — Oswald (condensed, headers), Courier Prime
-  (every number, ledger feel), Caveat (the check's payee and signature lines only).
-  All self-hosted from `src/assets/fonts`, latin subsets, ~250KB total.
-- **Structure** — the guess history is a ruled ledger page with right-aligned monospace
-  figures. Everything stays quiet so the check reveal can be loud.
+7% is presented as an assumption, never a forecast. On screen for the whole
+chart section:
 
-The check reveal animates in as a print/slide, then the bank stamp drops. Both are
-disabled under `prefers-reduced-motion`.
+> HYPOTHETICAL 7% AVERAGE ANNUAL GROWTH RATE, COMPOUNDED MONTHLY
+> Figures are rounded illustrations — not a prediction, promise or guarantee of any return.
 
-## Deploying
+and again on the end card. The narration is written the same way (see
+`voiceover.txt`). Real returns are not smooth, are not guaranteed, and this is
+an educational illustration of how compounding works — it is not investment
+advice. If it's going anywhere public, get it past whoever needs to see it.
 
-Static build, no environment variables. `vercel.json` and `netlify.toml` are both
-committed — point either host at the repo and it will build with `npm run build` and
-serve `dist/`.
+## Palette
 
-`dist/` is fully self-contained: no CDN, no external fonts, no network calls at
-runtime. It needs to be served over HTTP (any static server will do — `npm run preview`,
-`npx serve dist`, S3, GitHub Pages). Opening `dist/index.html` straight off the
-filesystem does **not** work, because Chrome and Safari block ES modules over `file://`
-— that is a browser rule, not something the build can opt out of.
+"Clay & Deep Teal on Warm Paper" — deliberately not finance-blue.
+
+| | Hex | Role |
+| --- | --- | --- |
+| Paper | `#F4EFE6` | background, and the fade colour between scenes |
+| Clay | `#DD5B3E` | invested — the hero line, the markers, the growth |
+| Deep teal | `#1F6F6B` | in a jar — the flat control |
+| Ink | `#22201D` | headlines |
+| Soft | `#8A8177` | axis labels, fine print |
+
+Two accents doing one job each, warm neutral behind them. Swap the hexes at the
+top of the file and the whole piece re-skins.
+
+Type is DejaVu Sans (matplotlib's built-in), mono for every number so digits
+don't jitter as counters run. It's clean but generic — dropping in a real
+display face is the single biggest visual upgrade available. Put a `.ttf`
+somewhere, `matplotlib.font_manager.fontManager.addfont(path)`, and change the
+`fontname` in `T()`.
+
+## How the file is organised
+
+One `render_video.py`, top to bottom: config, the money maths, easing helpers,
+layout, drawing primitives, one `draw_*` function per scene, then frame
+assembly. Everything is drawn on a single full-bleed axes measured in "units"
+where 1 unit = 10 px, so 16:9 is a 192 × 108 grid and 9:16 is 108 × 192. Font
+sizes stay in points and get multiplied by `L["fs"]` for the vertical cut.
+
+Scenes are pure functions of `t`. `draw_frame(ax, L, t)` clears the axes and
+redraws from scratch, which is why any time can be rendered on its own — that's
+what makes `--stills` cheap and what makes the whole thing easy to re-time.
+
+## Known rough edges
+
+- **The vertical cut is a port, not a design.** The scenes all fit and nothing
+  collides, but 9:16 wants bigger type and a shorter chart to really land. It
+  needs a pass of its own.
+- **Type is DejaVu Sans**, per above.
+- **The setup scene's climbing bars are illustrative shape only** — deliberately
+  unlabelled, because over ten months compounding is invisible and drawing it
+  to scale would say nothing.
+- **No audio track.** Render the ElevenLabs read and mux it:
+  `ffmpeg -i out/compound_growth_16x9.mp4 -i vo.mp3 -c:v copy -shortest final.mp4`
