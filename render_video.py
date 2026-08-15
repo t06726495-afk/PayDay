@@ -173,17 +173,23 @@ def layout_for(aspect: str) -> dict:
             col_invested=24.0, col_jar=76.0, col_year=156.0,
             chip_y=104.0,
             num_size=46, eyebrow_size=16,
+            hook_money=0.40, hook_head=0.70,       # scene anchors, as fractions of H
+            setup_src=0.86, setup_base=0.28, cs=1.0,
+            card_mark=0.66, card_head=0.40,
         )
     else:
         L.update(
-            fs=0.66,
-            chart=(19.0, 62.0, 88.0, 140.0),
+            fs=0.76,
+            chart=(19.0, 52.0, 88.0, 150.0),
             callout_x=90.5,
-            xtick_y=58.0, xlabel_y=52.5, disc_y=40.0,
-            head_eyebrow_y=157.0, head_num_y=146.0,
+            xtick_y=48.0, xlabel_y=42.0, disc_y=30.0,
+            head_eyebrow_y=170.0, head_num_y=158.0,
             col_invested=19.0, col_jar=88.0, col_year=None,
-            chip_y=176.0,
-            num_size=32, eyebrow_size=13,
+            chip_y=184.0,
+            num_size=34, eyebrow_size=15,
+            hook_money=0.42, hook_head=0.66,
+            setup_src=0.72, setup_base=0.36, cs=1.30,
+            card_mark=0.62, card_head=0.42,
         )
     return L
 
@@ -289,7 +295,7 @@ def curve_arrow(ax, p0, p1, p2, alpha=1.0, color=SOFT, lw=2.0, size=1.8, z=8, pr
 
 def draw_hook(ax, L, t):
     fs, cx, H = L["fs"], L["cx"], L["H"]
-    money_y = H * 0.40
+    money_y = H * L["hook_money"]
 
     # cash from allowance / yard work / summer job, dropping in
     items = [(-26, 0.00, "coin"), (-9, 0.10, "bill"), (8, 0.20, "coin"), (25, 0.30, "coin")]
@@ -309,7 +315,7 @@ def draw_hook(ax, L, t):
     T(ax, cx, money_y - 13 * fs - dy, spaced("ALLOWANCE  ·  YARD WORK  ·  SUMMER JOB"),
       size=17 * fs, color=SOFT, ha="center", va="center", alpha=a * 0.95)
 
-    head_y = H * 0.70
+    head_y = H * L["hook_head"]
     a1, d1 = rise(t, 1.35, 2.15)
     a2, d2 = rise(t, 1.60, 2.40)
     T(ax, cx, head_y + d1, "Put $20 a month", size=76 * fs, color=INK,
@@ -331,12 +337,13 @@ SETUP_FLIGHT = 0.85
 def draw_setup(ax, L, t):
     fs, cx, W, H = L["fs"], L["cx"], L["W"], L["H"]
 
-    src_y = H * 0.86
-    base = H * 0.28
-    ch_ = 34 * fs                       # container height
+    cs = fs * L["cs"]
+    src_y = H * L["setup_src"]
+    base = H * L["setup_base"]
+    ch_ = 34 * cs                       # container height
     half = W * 0.25
     lx, rx = cx - half, cx + half
-    mouth = base + ch_ + 4 * fs
+    mouth = base + ch_ * 1.14 + 4 * fs
 
     a_l, dl = rise(t, 3.75, 4.5)
     a_r, dr = rise(t, 3.95, 4.7)
@@ -351,7 +358,7 @@ def draw_setup(ax, L, t):
     fill = arrived / SETUP_PAIRS
 
     # -- left: a jar that just fills up
-    jw = 32 * fs
+    jw = 32 * cs
     jar_box = FancyBboxPatch((lx - jw / 2, base), jw, ch_,
                              boxstyle="round,pad=0,rounding_size=3.4",
                              fc="none", ec=TEAL, lw=3.0, alpha=a_l, zorder=10)
@@ -370,7 +377,7 @@ def draw_setup(ax, L, t):
 
     # -- right: bars that keep climbing (illustrative shape, deliberately unlabelled)
     n = SETUP_PAIRS
-    cluster = 34 * fs
+    cluster = 34 * cs
     bw = cluster / n
     for i in range(n):
         grown = clamp01((t - (SETUP_FIRST_COIN + i * SETUP_GAP + SETUP_FLIGHT)) / 0.45)
@@ -385,7 +392,7 @@ def draw_setup(ax, L, t):
                                     ec=CLAY, lw=1.6, alpha=a_r, zorder=10))
 
     for x, c, a in ((lx, TEAL, a_l), (rx, CLAY, a_r)):
-        ax.plot([x - 22 * fs, x + 22 * fs], [base, base], color=c, lw=2.8, alpha=a,
+        ax.plot([x - 22 * cs, x + 22 * cs], [base, base], color=c, lw=2.8, alpha=a,
                 zorder=12, solid_capstyle="round")
 
     # -- labels below each container
@@ -656,7 +663,7 @@ def draw_payoff(ax, L, t):
         # sit the callout on the mid-line of the wedge measured at its own left
         # edge, so it tucks between the two series instead of crossing either
         a3 = ease_out(seg(t, PAYOFF_IN + 4.2, PAYOFF_IN + 5.0))
-        left = gx - (2.6 + 27.0) * fs
+        left = gx - 2.6 * fs - 0.21 * (ch.x1 - ch.x0)
         yr_l = (left - ch.x0) / (ch.x1 - ch.x0) * ch.xmax
         chip(ax, gx - 2.6 * fs,
              (ch.py(jar_at(yr_l)) + ch.py(invested_at(yr_l))) / 2 + 1.0 * fs,
@@ -680,7 +687,7 @@ def draw_payoff(ax, L, t):
 def draw_card(ax, L, t):
     fs, cx, H = L["fs"], L["cx"], L["H"]
     a0 = ease_out(seg(t, CARD_IN + 0.15, CARD_IN + 0.85))
-    mark_y = H * 0.66
+    mark_y = H * L["card_mark"]
 
     p = ease_in_out(seg(t, CARD_IN + 0.2, CARD_IN + 1.6))
     x0, x1 = cx - 30 * fs, cx + 30 * fs
@@ -695,13 +702,13 @@ def draw_card(ax, L, t):
 
     a1, d1 = rise(t, CARD_IN + 0.5, CARD_IN + 1.2)
     a2, d2 = rise(t, CARD_IN + 0.8, CARD_IN + 1.5)
-    T(ax, cx, H * 0.40 + d1, "$20 a month.", size=62 * fs, color=INK,
+    T(ax, cx, H * L["card_head"] + d1, "$20 a month.", size=62 * fs, color=INK,
       ha="center", va="center", alpha=a1)
-    T(ax, cx, H * 0.40 - 11.0 * fs - d2, "Time does the heavy lifting.", size=40 * fs,
+    T(ax, cx, H * L["card_head"] - 11.0 * fs - d2, "Time does the heavy lifting.", size=40 * fs,
       color=CLAY, ha="center", va="center", alpha=a2)
 
     a3 = ease_out(seg(t, CARD_IN + 1.3, CARD_IN + 2.0))
-    T(ax, cx, H * 0.15, "Educational illustration at a hypothetical 7% average annual\n"
+    T(ax, cx, H * 0.155, "Educational illustration at a hypothetical 7% average annual\n"
                         "growth rate. Not financial advice, and not a guarantee.",
       size=15 * fs, color=SOFT, ha="center", va="center", alpha=a3 * 0.9, weight="normal")
 

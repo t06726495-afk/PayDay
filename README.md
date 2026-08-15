@@ -130,11 +130,17 @@ Scenes are pure functions of `t`. `draw_frame(ax, L, t)` clears the axes and
 redraws from scratch, which is why any time can be rendered on its own — that's
 what makes `--stills` cheap and what makes the whole thing easy to re-time.
 
+The layout dict `L` holds every per-aspect number in one place: the chart rect,
+the header columns, and the scene anchors (`hook_head`, `setup_base`, `cs`,
+`card_mark`, …) as fractions of frame height. Re-composing a scene for one
+aspect means editing `layout_for`, not the drawing code.
+
 ## Known rough edges
 
-- **The vertical cut is a port, not a design.** The scenes all fit and nothing
-  collides, but 9:16 wants bigger type and a shorter chart to really land. It
-  needs a pass of its own.
+- **The vertical cut still has dead space** below the setup scene. It has its
+  own anchors (`hook_money`, `setup_src`, `setup_base`, `cs`, `card_mark` in
+  `layout_for`) and its own type scale, so the fix is moving those numbers —
+  but the composition hasn't been designed against a real 9:16 feed yet.
 - **Type is DejaVu Sans**, per above.
 - **The setup scene's climbing bars are illustrative shape only** — deliberately
   unlabelled, because over ten months compounding is invisible and drawing it
