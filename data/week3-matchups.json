@@ -1,6 +1,6 @@
 {
   "week": 3,
-  "status": "in progress when captured - confirm final scores",
+  "status": "final",
   "matchups": [
     { "home": { "team": "Strange things",    "score": 147.45 }, "away": { "team": "Dakota's Dawg's",     "score": 119.25 } },
     { "home": { "team": "Fugitive FC",       "score": 138.00 }, "away": { "team": "Augie's Wins",        "score": 117.35 } },
