@@ -1,0 +1,47 @@
+{
+  "league": "Family League",
+  "week": 3,
+
+  "matchups": [
+    { "home": { "team": "Strange things",    "score": 147.45 }, "away": { "team": "Dakota's Dawg's",     "score": 119.25 } },
+    { "home": { "team": "Fugitive FC",       "score": 138.00 }, "away": { "team": "Augie's Wins",        "score": 117.35 } },
+    { "home": { "team": "Val's Pals",        "score": 173.50 }, "away": { "team": "Messi",               "score": 141.80 } },
+    { "home": { "team": "Sack Dance Nathan", "score": 168.50 }, "away": { "team": "Melissa the Blitz-a", "score": 131.05 } },
+    { "home": { "team": "Cats&Stuff",        "score": 148.25 }, "away": { "team": "Hash Marks Aaron",    "score": 126.30 } },
+    { "home": { "team": "Pick 6 Cesar",      "score": 143.65 }, "away": { "team": "Chef Francisco",      "score": 139.25 } }
+  ],
+
+  "headlines": [
+    { "tag": "UPSET OF THE WEEK", "title": "Sack Dance Nathan 168.50 – 131.05 Melissa", "detail": "The #11 team takes down #4. Nate finally gets to dance." },
+    { "tag": "GIANT SLAYER",      "title": "Cats&Stuff 148.25 – 126.30 Hash Marks Aaron", "detail": "Like any good cat, Katie saw something perfect and knocked it right off the table." },
+    { "tag": "HIGH SCORE",        "title": "Val's Pals — 173.50", "detail": "Best score in the league this week, and it wasn't close." },
+    { "tag": "NAIL-BITER",        "title": "Pick 6 Cesar 143.65 – 139.25 Chef Francisco", "detail": "Decided by just 4.40 points." }
+  ],
+
+  "teams": [
+    { "rank": 1,  "lastWeek": 1,  "team": "Fugitive FC",         "owner": "Johnny",  "abbr": "FFC", "color": "#d7263d", "record": "3-0-0", "pf": 501.85, "pa": 363.45, "streak": "W-3", "sound": "vo-congratulations",
+      "blurb": "Still perfect at 3-0 and No. 1 in points. Nobody in this league can catch the Fugitive." },
+    { "rank": 2,  "lastWeek": 3,  "team": "Strange things",      "owner": "Taylor",  "abbr": "STR", "color": "#8e1b2b", "record": "2-1-0", "pf": 489.55, "pa": 424.10, "streak": "W-1",
+      "blurb": "Second in points and cruised past the Dawg's. Things are getting stranger — and scarier — for everyone else." },
+    { "rank": 3,  "lastWeek": 6,  "team": "Val's Pals",          "owner": "Val",     "abbr": "VAL", "color": "#27c24c", "record": "2-1-0", "pf": 466.40, "pa": 421.25, "streak": "W-2", "sound": "vo-new_highscore",
+      "blurb": "Week-high 173.50 and a three-spot jump. The hottest team in the league. Val's got pals AND points." },
+    { "rank": 4,  "lastWeek": 5,  "team": "Pick 6 Cesar",        "owner": "Cesar",   "abbr": "P6C", "color": "#f26b38", "record": "2-1-0", "pf": 439.30, "pa": 420.15, "streak": "W-1",
+      "blurb": "Survived Fran by 4.40 points. Not pretty, but a W is a W, and Cesar will take it." },
+    { "rank": 5,  "lastWeek": 7,  "team": "Cats&Stuff",          "owner": "Katie",   "abbr": "CAT", "color": "#1aa7b8", "record": "2-1-0", "pf": 426.10, "pa": 390.05, "streak": "W-1",
+      "blurb": "Up two spots after handing Aaron his first loss. The Cats are 2-1 and purring." },
+    { "rank": 6,  "lastWeek": 2,  "team": "Hash Marks Aaron",    "owner": "Aaron",   "abbr": "HMA", "color": "#e0b43a", "record": "2-1-0", "pf": 387.90, "pa": 329.60, "streak": "L-1", "sound": "vo-mission_failed",
+      "blurb": "Biggest fall of the week. Unbeaten no more, and those 2-0 vibes lasted exactly one week." },
+    { "rank": 7,  "lastWeek": 4,  "team": "Melissa the Blitz-a", "owner": "Melissa", "abbr": "MEL", "color": "#c05bd6", "record": "1-2-0", "pf": 459.00, "pa": 554.90, "streak": "L-1",
+      "blurb": "Most points AGAINST in the league. Melissa isn't bad — everyone just saves their best week for her." },
+    { "rank": 8,  "lastWeek": 8,  "team": "Messi",               "owner": "Colin",   "abbr": "MES", "color": "#b8323f", "record": "1-2-0", "pf": 399.80, "pa": 456.45, "streak": "L-1",
+      "blurb": "Scored 141.80, which wins a lot of weeks. Just not the week you draw Val's buzzsaw. Wrong place, wrong time, Colin." },
+    { "rank": 9,  "lastWeek": 9,  "team": "Chef Francisco",      "owner": "Fran",    "abbr": "CHF", "color": "#d9a520", "record": "1-2-0", "pf": 392.10, "pa": 411.55, "streak": "L-1",
+      "blurb": "Lost by 4.40, the closest game of the week. Fran had the recipe — just pulled it out of the oven too early." },
+    { "rank": 10, "lastWeek": 11, "team": "Sack Dance Nathan",   "owner": "Nate",    "abbr": "SDN", "color": "#2f5fd0", "record": "1-2-0", "pf": 386.85, "pa": 409.15, "streak": "W-1", "sound": "vo-level_up",
+      "blurb": "FINALLY, a reason to sack dance. Nate drops 168.50 on Melissa for the upset of the week and climbs out of the basement." },
+    { "rank": 11, "lastWeek": 10, "team": "Augie's Wins",        "owner": "Augie",   "abbr": "AUG", "color": "#6b4bc4", "record": "1-2-0", "pf": 357.30, "pa": 420.30, "streak": "L-2",
+      "blurb": "Two straight losses. At this point the team name is starting to feel like false advertising." },
+    { "rank": 12, "lastWeek": 12, "team": "Dakota's Dawg's",     "owner": "Greg",    "abbr": "DAW", "color": "#6f8f2e", "record": "0-3-0", "pf": 297.80, "pa": 403.00, "streak": "L-3", "sound": "vo-game_over",
+      "blurb": "0-3 and last in points. The Dawg's are all bark, no bite. Greg, the kennel door is open whenever you're ready." }
+  ]
+}
