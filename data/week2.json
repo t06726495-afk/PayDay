@@ -1,17 +1,17 @@
 {
   "week": 2,
   "teams": [
-    { "rank": 1,  "team": "Fugitive FC",         "record": "2-0-0", "pf": 363.85, "pa": 246.10, "streak": "W-2" },
-    { "rank": 2,  "team": "Hash Marks Aaron",    "record": "2-0-0", "pf": 261.60, "pa": 181.35, "streak": "W-2" },
-    { "rank": 3,  "team": "Strange things",      "record": "1-1-0", "pf": 342.10, "pa": 304.85, "streak": "L-1" },
-    { "rank": 4,  "team": "Melissa the Blitz-a", "record": "1-1-0", "pf": 327.95, "pa": 386.40, "streak": "W-1" },
-    { "rank": 5,  "team": "Pick 6 Cesar",        "record": "1-1-0", "pf": 295.65, "pa": 280.90, "streak": "L-1" },
-    { "rank": 6,  "team": "Val's Pals",          "record": "1-1-0", "pf": 292.90, "pa": 279.45, "streak": "W-1" },
-    { "rank": 7,  "team": "Cats&Stuff",          "record": "1-1-0", "pf": 277.85, "pa": 263.75, "streak": "L-1" },
-    { "rank": 8,  "team": "Messi",               "record": "1-1-0", "pf": 258.00, "pa": 282.95, "streak": "W-1" },
-    { "rank": 9,  "team": "Chef Francisco",      "record": "1-1-0", "pf": 252.85, "pa": 267.90, "streak": "W-1" },
-    { "rank": 10, "team": "Augie's Wins",        "record": "1-1-0", "pf": 239.95, "pa": 282.30, "streak": "L-1" },
-    { "rank": 11, "team": "Sack Dance Nathan",   "record": "0-2-0", "pf": 218.35, "pa": 278.10, "streak": "L-2" },
-    { "rank": 12, "team": "Dakota's Dawg's",     "record": "0-2-0", "pf": 178.55, "pa": 255.55, "streak": "L-2" }
+    {"rank": 1, "team": "Fugitive FC", "owner": "Johnny", "record": "2-0-0", "pf": 363.85, "pa": 246.1, "streak": "W-2"},
+    {"rank": 2, "team": "Hash Marks Aaron", "owner": "Aaron", "record": "2-0-0", "pf": 261.6, "pa": 181.35, "streak": "W-2"},
+    {"rank": 3, "team": "Strange things", "owner": "Taylor", "record": "1-1-0", "pf": 342.1, "pa": 304.85, "streak": "L-1"},
+    {"rank": 4, "team": "Melissa the Blitz-a", "owner": "Melissa", "record": "1-1-0", "pf": 327.95, "pa": 386.4, "streak": "W-1"},
+    {"rank": 5, "team": "Pick 6 Cesar", "owner": "Cesar", "record": "1-1-0", "pf": 295.65, "pa": 280.9, "streak": "L-1"},
+    {"rank": 6, "team": "Val's Pals", "owner": "Val", "record": "1-1-0", "pf": 292.9, "pa": 279.45, "streak": "W-1"},
+    {"rank": 7, "team": "Cats&Stuff", "owner": "Katie", "record": "1-1-0", "pf": 277.85, "pa": 263.75, "streak": "L-1"},
+    {"rank": 8, "team": "Messi", "owner": "Colin", "record": "1-1-0", "pf": 258.0, "pa": 282.95, "streak": "W-1"},
+    {"rank": 9, "team": "Chef Francisco", "owner": "Fran", "record": "1-1-0", "pf": 252.85, "pa": 267.9, "streak": "W-1"},
+    {"rank": 10, "team": "Augie's Wins", "owner": "Augie", "record": "1-1-0", "pf": 239.95, "pa": 282.3, "streak": "L-1"},
+    {"rank": 11, "team": "Sack Dance Nathan", "owner": "Nate", "record": "0-2-0", "pf": 218.35, "pa": 278.1, "streak": "L-2"},
+    {"rank": 12, "team": "Dakota's Dawg's", "owner": "Greg", "record": "0-2-0", "pf": 178.55, "pa": 255.55, "streak": "L-2"}
   ]
 }
