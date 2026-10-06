@@ -11,7 +11,7 @@ import {
 import { Background } from "../components/Background";
 import { Badge } from "../components/Badge";
 import { Movement } from "../components/Movement";
-import { data, fmt, movement, Team } from "../data";
+import { data, fmt, movement, prevOf, Team } from "../data";
 import { body, colors, display } from "../theme";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -186,7 +186,7 @@ const Card: React.FC<{ team: Team; top: boolean }> = ({ team, top }) => {
         >
           <Movement change={change} />
           <div style={{ fontFamily: body, fontWeight: 600, fontSize: 32, color: colors.muted, letterSpacing: 2 }}>
-            LAST WEEK #{team.lastWeek}
+            LAST WEEK #{prevOf(team).rank}
           </div>
         </div>
       </div>

@@ -74,7 +74,7 @@ export const Headlines: React.FC = () => {
             height: "100%",
           }}
         >
-          {data.headlines.slice(0, 4).map((h, i) => (
+          {(data.headlines ?? []).slice(0, 4).map((h, i) => (
             <Sequence key={h.tag} from={10 + i * 40} layout="none">
               <Audio src={staticFile("sfx/slam.ogg")} volume={0.45} />
               <HeadlineCard h={h} />

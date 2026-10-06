@@ -44,3 +44,8 @@ export const REVEAL = 4.5 * FPS;
 export const REVEAL_TOP = 7 * FPS;
 export const FINAL = 6 * FPS;
 export const TRANSITION = 12;
+
+// Short format (default video).
+export const SHORT_INTRO = 3 * FPS;
+export const SHORT_SCORES = 7 * FPS;
+export const BOARD = 15 * FPS;
