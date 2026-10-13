@@ -11,6 +11,12 @@
     {"home": {"team": "Sack Dance Nathan", "score": 125.95}, "away": {"team": "Augie's Wins", "score": 129.7}}
   ],
 
+  "headlines": [
+    { "tag": "TOP SCORE", "title": "Messi 201.30 – 172.80 Hash Marks Aaron", "detail": "Colin puts up the week's best score and jumps four spots to #6." },
+    { "tag": "STILL PERFECT", "title": "Fugitive FC 160.60 – 114.90 Val's Pals", "detail": "Johnny moves to 5-0, the only unbeaten team left. Val drops two spots to #7." },
+    { "tag": "BIG CLIMB", "title": "Melissa the Blitz-a 168.00 – 164.25 Chef Francisco", "detail": "Melissa wins by 3.75 and moves up four spots to #5." }
+  ],
+
   "teams": [
     {"rank": 1, "team": "Fugitive FC", "owner": "Johnny", "abbr": "FFC", "color": "#d7263d", "record": "5-0-0", "pf": 806.4, "pa": 599.9, "streak": "W-5"},
     {"rank": 2, "team": "Strange things", "owner": "Taylor", "abbr": "STR", "color": "#8e1b2b", "record": "4-1-0", "pf": 795.45, "pa": 704.45, "streak": "W-3"},

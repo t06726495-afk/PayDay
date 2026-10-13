@@ -13,7 +13,7 @@ import { Scoreboard } from "./scenes/Scoreboard";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* Default: ~24s short format */}
+      {/* Default: ~30s short format */}
       <Composition
         id="PowerRankings"
         component={PowerRankings}
@@ -34,7 +34,7 @@ export const RemotionRoot: React.FC = () => {
       <Folder name="Scenes">
         <Composition id="Intro" component={Intro} durationInFrames={90} fps={30} width={1920} height={1080} />
         <Composition id="Scoreboard" component={Scoreboard} durationInFrames={210} fps={30} width={1920} height={1080} />
-        <Composition id="BoardShift" component={BoardShift} durationInFrames={450} fps={30} width={1920} height={1080} />
+        <Composition id="BoardShift" component={BoardShift} durationInFrames={390} fps={30} width={1920} height={1080} />
         <Composition id="Headlines" component={Headlines} durationInFrames={270} fps={30} width={1920} height={1080} />
         <Composition
           id="RankReveal"

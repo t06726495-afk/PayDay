@@ -48,4 +48,5 @@ export const TRANSITION = 12;
 // Short format (default video).
 export const SHORT_INTRO = 3 * FPS;
 export const SHORT_SCORES = 7 * FPS;
-export const BOARD = 15 * FPS;
+export const BOARD = 13 * FPS;
+export const SHORT_HEADLINES = 8 * FPS;

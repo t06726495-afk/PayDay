@@ -333,28 +333,6 @@ export const BoardShift: React.FC = () => {
           ))}
       </div>
 
-      <AbsoluteFill
-        style={{
-          justifyContent: "flex-start",
-          alignItems: "flex-end",
-          padding: "104px 110px",
-          pointerEvents: "none",
-        }}
-      >
-        <Interactive.Div
-          name="Sign-off"
-          style={{
-            fontFamily: display,
-            fontWeight: 700,
-            fontSize: 40,
-            letterSpacing: 6,
-            color: colors.gold,
-            opacity: interpolate(frame, [330, 350], [0, 1], clamp),
-          }}
-        >
-          SEE YOU NEXT WEEK
-        </Interactive.Div>
-      </AbsoluteFill>
     </AbsoluteFill>
   );
 };

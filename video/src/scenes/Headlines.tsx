@@ -2,6 +2,7 @@ import { Audio } from "@remotion/media";
 import {
   AbsoluteFill,
   Easing,
+  Interactive,
   interpolate,
   Sequence,
   staticFile,
@@ -58,30 +59,54 @@ const HeadlineCard: React.FC<{ h: Headline }> = ({ h }) => {
   );
 };
 
-export const Headlines: React.FC = () => {
+export const Headlines: React.FC<{ signOff?: boolean }> = ({ signOff = false }) => {
+  const frame = useCurrentFrame();
+  const stories = (data.headlines ?? []).slice(0, 4);
+  // Three stories read best as full-width rows; four fill a 2x2 grid.
+  const rows = stories.length <= 3;
   return (
     <AbsoluteFill>
       <Background accent="#e0b43a" />
       <Audio src={staticFile("sfx/swoosh.ogg")} volume={0.5} />
       <SceneTitle kicker={`WEEK ${data.week}`} title="HEADLINES" />
-      <AbsoluteFill style={{ padding: "250px 110px 130px" }}>
+      <AbsoluteFill style={{ padding: "235px 110px 110px" }}>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridTemplateRows: "1fr 1fr",
-            gap: 36,
+            gridTemplateColumns: rows ? "1fr" : "1fr 1fr",
+            gridTemplateRows: rows ? `repeat(${Math.max(stories.length, 1)}, 1fr)` : "1fr 1fr",
+            gap: rows ? 26 : 36,
             height: "100%",
           }}
         >
-          {(data.headlines ?? []).slice(0, 4).map((h, i) => (
-            <Sequence key={h.tag} from={10 + i * 40} layout="none">
+          {stories.map((h, i) => (
+            <Sequence key={h.tag} name={h.tag} from={10 + i * 40} layout="none">
               <Audio src={staticFile("sfx/slam.ogg")} volume={0.45} />
               <HeadlineCard h={h} />
             </Sequence>
           ))}
         </div>
       </AbsoluteFill>
+      {signOff ? (
+        <AbsoluteFill style={{ alignItems: "flex-end", padding: "104px 110px", pointerEvents: "none" }}>
+          <Interactive.Div
+            name="Sign-off"
+            style={{
+              fontFamily: display,
+              fontWeight: 700,
+              fontSize: 40,
+              letterSpacing: 6,
+              color: colors.gold,
+              opacity: interpolate(frame, [150, 170], [0, 1], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              }),
+            }}
+          >
+            SEE YOU NEXT WEEK
+          </Interactive.Div>
+        </AbsoluteFill>
+      ) : null}
     </AbsoluteFill>
   );
 };

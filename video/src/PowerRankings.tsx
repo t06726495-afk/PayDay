@@ -4,15 +4,16 @@ import { wipe } from "@remotion/transitions/wipe";
 import { AbsoluteFill, Sequence, useVideoConfig } from "remotion";
 import { Ticker } from "./components/Ticker";
 import { BoardShift } from "./scenes/BoardShift";
+import { Headlines } from "./scenes/Headlines";
 import { Intro } from "./scenes/Intro";
 import { Scoreboard } from "./scenes/Scoreboard";
-import { BOARD, SHORT_INTRO, SHORT_SCORES, TRANSITION } from "./theme";
+import { BOARD, SHORT_HEADLINES, SHORT_INTRO, SHORT_SCORES, TRANSITION } from "./theme";
 
 const timing = linearTiming({ durationInFrames: TRANSITION });
 
-export const TOTAL_FRAMES = SHORT_INTRO + SHORT_SCORES + BOARD - 2 * TRANSITION;
+export const TOTAL_FRAMES = SHORT_INTRO + SHORT_SCORES + BOARD + SHORT_HEADLINES - 3 * TRANSITION;
 
-// Short format: intro, final scores, then last week's board shuffling into this week's.
+// Short format: intro, final scores, last week's board shuffling into this week's, then headlines.
 export const PowerRankings: React.FC = () => {
   const { fps } = useVideoConfig();
   return (
@@ -26,8 +27,12 @@ export const PowerRankings: React.FC = () => {
           <Scoreboard />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition presentation={slide({ direction: "from-right" })} timing={timing} />
-        <TransitionSeries.Sequence name="Board shift" durationInFrames={450}>
+        <TransitionSeries.Sequence name="Board shift" durationInFrames={390}>
           <BoardShift />
+        </TransitionSeries.Sequence>
+        <TransitionSeries.Transition presentation={slide({ direction: "from-right" })} timing={timing} />
+        <TransitionSeries.Sequence name="Headlines" durationInFrames={240}>
+          <Headlines signOff />
         </TransitionSeries.Sequence>
       </TransitionSeries>
 
