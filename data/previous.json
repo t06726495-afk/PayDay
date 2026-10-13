@@ -1,101 +1,101 @@
 {
-  "week": 3,
+  "week": 4,
   "teams": [
     {
       "rank": 1,
       "team": "Fugitive FC",
-      "record": "3-0-0",
-      "pf": 501.85,
-      "pa": 363.45,
-      "streak": "W-3"
+      "record": "4-0-0",
+      "pf": 645.8,
+      "pa": 485.0,
+      "streak": "W-4"
     },
     {
       "rank": 2,
       "team": "Strange things",
-      "record": "2-1-0",
-      "pf": 489.55,
-      "pa": 424.1,
-      "streak": "W-1"
+      "record": "3-1-0",
+      "pf": 639.4,
+      "pa": 561.45,
+      "streak": "W-2"
     },
     {
       "rank": 3,
-      "team": "Val's Pals",
-      "record": "2-1-0",
-      "pf": 466.4,
-      "pa": 421.25,
+      "team": "Pick 6 Cesar",
+      "record": "3-1-0",
+      "pf": 620.35,
+      "pa": 584.1,
       "streak": "W-2"
     },
     {
       "rank": 4,
-      "team": "Pick 6 Cesar",
-      "record": "2-1-0",
-      "pf": 439.3,
-      "pa": 420.15,
+      "team": "Hash Marks Aaron",
+      "record": "3-1-0",
+      "pf": 515.9,
+      "pa": 456.3,
       "streak": "W-1"
     },
     {
       "rank": 5,
-      "team": "Cats&Stuff",
-      "record": "2-1-0",
-      "pf": 426.1,
-      "pa": 390.05,
-      "streak": "W-1"
+      "team": "Val's Pals",
+      "record": "2-2-0",
+      "pf": 593.1,
+      "pa": 549.25,
+      "streak": "L-1"
     },
     {
       "rank": 6,
-      "team": "Hash Marks Aaron",
-      "record": "2-1-0",
-      "pf": 387.9,
-      "pa": 329.6,
+      "team": "Cats&Stuff",
+      "record": "2-2-0",
+      "pf": 547.65,
+      "pa": 534.0,
       "streak": "L-1"
     },
     {
       "rank": 7,
-      "team": "Melissa the Blitz-a",
-      "record": "1-2-0",
-      "pf": 459.0,
-      "pa": 554.9,
-      "streak": "L-1"
+      "team": "Chef Francisco",
+      "record": "2-2-0",
+      "pf": 521.2,
+      "pa": 539.6,
+      "streak": "W-1"
     },
     {
       "rank": 8,
-      "team": "Messi",
-      "record": "1-2-0",
-      "pf": 399.8,
-      "pa": 456.45,
-      "streak": "L-1"
+      "team": "Sack Dance Nathan",
+      "record": "2-2-0",
+      "pf": 514.45,
+      "pa": 515.65,
+      "streak": "W-2"
     },
     {
       "rank": 9,
-      "team": "Chef Francisco",
-      "record": "1-2-0",
-      "pf": 392.1,
-      "pa": 411.55,
-      "streak": "L-1"
+      "team": "Melissa the Blitz-a",
+      "record": "1-3-0",
+      "pf": 622.95,
+      "pa": 735.95,
+      "streak": "L-2"
     },
     {
       "rank": 10,
-      "team": "Sack Dance Nathan",
-      "record": "1-2-0",
-      "pf": 386.85,
-      "pa": 409.15,
-      "streak": "W-1"
+      "team": "Messi",
+      "record": "1-3-0",
+      "pf": 527.85,
+      "pa": 585.55,
+      "streak": "L-2"
     },
     {
       "rank": 11,
       "team": "Augie's Wins",
-      "record": "1-2-0",
-      "pf": 357.3,
-      "pa": 420.3,
-      "streak": "L-2"
+      "record": "1-3-0",
+      "pf": 494.65,
+      "pa": 570.15,
+      "streak": "L-3"
     },
     {
       "rank": 12,
       "team": "Dakota's Dawg's",
-      "record": "0-3-0",
-      "pf": 297.8,
-      "pa": 403.0,
-      "streak": "L-3"
+      "record": "0-4-0",
+      "pf": 404.3,
+      "pa": 530.6,
+      "streak": "L-4"
     }
   ]
 }
