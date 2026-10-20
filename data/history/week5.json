@@ -1,0 +1,34 @@
+{
+  "league": "GVR",
+  "week": 5,
+
+  "matchups": [
+    {"home": {"team": "Strange things", "score": 156.05}, "away": {"team": "Cats&Stuff", "score": 143.0}},
+    {"home": {"team": "Fugitive FC", "score": 160.6}, "away": {"team": "Val's Pals", "score": 114.9}},
+    {"home": {"team": "Chef Francisco", "score": 164.25}, "away": {"team": "Melissa the Blitz-a", "score": 168.0}},
+    {"home": {"team": "Hash Marks Aaron", "score": 172.8}, "away": {"team": "Messi", "score": 201.3}},
+    {"home": {"team": "Dakota's Dawg's", "score": 100.6}, "away": {"team": "Pick 6 Cesar", "score": 158.8}},
+    {"home": {"team": "Sack Dance Nathan", "score": 125.95}, "away": {"team": "Augie's Wins", "score": 129.7}}
+  ],
+
+  "headlines": [
+    { "tag": "TOP SCORE", "title": "Messi 201.30 – 172.80 Hash Marks Aaron", "detail": "Colin puts up the week's best score and jumps four spots to #6." },
+    { "tag": "STILL PERFECT", "title": "Fugitive FC 160.60 – 114.90 Val's Pals", "detail": "Johnny moves to 5-0, the only unbeaten team left. Val drops two spots to #7." },
+    { "tag": "BIG CLIMB", "title": "Melissa the Blitz-a 168.00 – 164.25 Chef Francisco", "detail": "Melissa wins by 3.75 and moves up four spots to #5." }
+  ],
+
+  "teams": [
+    {"rank": 1, "team": "Fugitive FC", "owner": "Johnny", "abbr": "FFC", "color": "#d7263d", "record": "5-0-0", "pf": 806.4, "pa": 599.9, "streak": "W-5"},
+    {"rank": 2, "team": "Strange things", "owner": "Taylor", "abbr": "STR", "color": "#8e1b2b", "record": "4-1-0", "pf": 795.45, "pa": 704.45, "streak": "W-3"},
+    {"rank": 3, "team": "Pick 6 Cesar", "owner": "Cesar", "abbr": "P6C", "color": "#f26b38", "record": "4-1-0", "pf": 779.15, "pa": 684.7, "streak": "W-3"},
+    {"rank": 4, "team": "Hash Marks Aaron", "owner": "Aaron", "abbr": "HMA", "color": "#e0b43a", "record": "3-2-0", "pf": 688.7, "pa": 657.6, "streak": "L-1"},
+    {"rank": 5, "team": "Melissa the Blitz-a", "owner": "Melissa", "abbr": "MEL", "color": "#c05bd6", "record": "2-3-0", "pf": 790.95, "pa": 900.2, "streak": "W-1"},
+    {"rank": 6, "team": "Messi", "owner": "Colin", "abbr": "MES", "color": "#b8323f", "record": "2-3-0", "pf": 729.15, "pa": 758.35, "streak": "W-1"},
+    {"rank": 7, "team": "Val's Pals", "owner": "Val", "abbr": "VAL", "color": "#27c24c", "record": "2-3-0", "pf": 708.0, "pa": 709.85, "streak": "L-2"},
+    {"rank": 8, "team": "Cats&Stuff", "owner": "Katie", "abbr": "CAT", "color": "#1aa7b8", "record": "2-3-0", "pf": 690.65, "pa": 690.05, "streak": "L-2"},
+    {"rank": 9, "team": "Chef Francisco", "owner": "Fran", "abbr": "CHF", "color": "#d9a520", "record": "2-3-0", "pf": 685.45, "pa": 707.6, "streak": "L-1"},
+    {"rank": 10, "team": "Sack Dance Nathan", "owner": "Nate", "abbr": "SDN", "color": "#2f5fd0", "record": "2-3-0", "pf": 640.4, "pa": 645.35, "streak": "L-1"},
+    {"rank": 11, "team": "Augie's Wins", "owner": "Augie", "abbr": "AUG", "color": "#6b4bc4", "record": "2-3-0", "pf": 624.35, "pa": 696.1, "streak": "W-1"},
+    {"rank": 12, "team": "Dakota's Dawg's", "owner": "Greg", "abbr": "DAW", "color": "#6f8f2e", "record": "0-5-0", "pf": 504.9, "pa": 689.4, "streak": "L-5"}
+  ]
+}
