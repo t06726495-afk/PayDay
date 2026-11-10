@@ -7,6 +7,7 @@ import { BoardShift } from "./scenes/BoardShift";
 import { FinalBoard } from "./scenes/FinalBoard";
 import { Headlines } from "./scenes/Headlines";
 import { Intro } from "./scenes/Intro";
+import { Pyramid } from "./scenes/Pyramid";
 import { RankReveal } from "./scenes/RankReveal";
 import { Scoreboard } from "./scenes/Scoreboard";
 
@@ -31,6 +32,8 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
       />
+      {/* Standings pyramid: one tier per record */}
+      <Composition id="Pyramid" component={Pyramid} durationInFrames={300} fps={30} width={1920} height={1080} />
       <Folder name="Scenes">
         <Composition id="Intro" component={Intro} durationInFrames={90} fps={30} width={1920} height={1080} />
         <Composition id="Scoreboard" component={Scoreboard} durationInFrames={210} fps={30} width={1920} height={1080} />
