@@ -1,0 +1,217 @@
+{
+  "league": "GVR",
+  "week": 8,
+  "matchups": [
+    {
+      "home": {
+        "team": "Augie's Wins",
+        "score": 144.6
+      },
+      "away": {
+        "team": "Melissa the Blitz-a",
+        "score": 90.5
+      }
+    },
+    {
+      "home": {
+        "team": "Injured Reserves",
+        "score": 84.5
+      },
+      "away": {
+        "team": "Messi",
+        "score": 92.45
+      }
+    },
+    {
+      "home": {
+        "team": "Cats&Stuff",
+        "score": 140.75
+      },
+      "away": {
+        "team": "Chef Francisco",
+        "score": 195.3
+      }
+    },
+    {
+      "home": {
+        "team": "Sack Dance Nathan",
+        "score": 82.75
+      },
+      "away": {
+        "team": "Hash Marks Aaron",
+        "score": 127.0
+      }
+    },
+    {
+      "home": {
+        "team": "Val's Pals",
+        "score": 141.6
+      },
+      "away": {
+        "team": "Pick 6 Cesar",
+        "score": 148.45
+      }
+    },
+    {
+      "home": {
+        "team": "Strange things",
+        "score": 141.8
+      },
+      "away": {
+        "team": "Fugitive FC",
+        "score": 115.05
+      }
+    }
+  ],
+  "headlines": [
+    {
+      "tag": "TOP SCORE AGAIN",
+      "title": "Chef Francisco 195.30 \u2013 140.75 Cats&Stuff",
+      "detail": "Fran has the week's best score for the second week in a row and climbs to #3."
+    },
+    {
+      "tag": "FIRST TO SEVEN WINS",
+      "title": "Strange things 141.80 \u2013 115.05 Fugitive FC",
+      "detail": "Taylor moves to 7-1 and stays #1. Johnny has now lost three straight."
+    },
+    {
+      "tag": "CLOSEST GAME",
+      "title": "Pick 6 Cesar 148.45 \u2013 141.60 Val's Pals",
+      "detail": "Cesar wins by 6.85 and holds #2 at 6-2."
+    }
+  ],
+  "teams": [
+    {
+      "rank": 1,
+      "team": "Strange things",
+      "owner": "Taylor",
+      "abbr": "STR",
+      "color": "#8e1b2b",
+      "record": "7-1-0",
+      "pf": 1204.35,
+      "pa": 1048.9,
+      "streak": "W-6"
+    },
+    {
+      "rank": 2,
+      "team": "Pick 6 Cesar",
+      "owner": "Cesar",
+      "abbr": "P6C",
+      "color": "#f26b38",
+      "record": "6-2-0",
+      "pf": 1217.4,
+      "pa": 1094.6,
+      "streak": "W-2"
+    },
+    {
+      "rank": 3,
+      "team": "Chef Francisco",
+      "owner": "Fran",
+      "abbr": "CHF",
+      "color": "#d9a520",
+      "record": "5-3-0",
+      "pf": 1194.85,
+      "pa": 1020.45,
+      "streak": "W-3"
+    },
+    {
+      "rank": 4,
+      "team": "Fugitive FC",
+      "owner": "Johnny",
+      "abbr": "FFC",
+      "color": "#d7263d",
+      "record": "5-3-0",
+      "pf": 1143.3,
+      "pa": 1023.0,
+      "streak": "L-3"
+    },
+    {
+      "rank": 5,
+      "team": "Hash Marks Aaron",
+      "owner": "Aaron",
+      "abbr": "HMA",
+      "color": "#e0b43a",
+      "record": "5-3-0",
+      "pf": 1094.4,
+      "pa": 998.9,
+      "streak": "W-1"
+    },
+    {
+      "rank": 6,
+      "team": "Melissa the Blitz-a",
+      "owner": "Melissa",
+      "abbr": "MEL",
+      "color": "#c05bd6",
+      "record": "4-4-0",
+      "pf": 1149.95,
+      "pa": 1256.5,
+      "streak": "L-1"
+    },
+    {
+      "rank": 7,
+      "team": "Messi",
+      "owner": "Colin",
+      "abbr": "MES",
+      "color": "#b8323f",
+      "record": "4-4-0",
+      "pf": 1081.55,
+      "pa": 1065.25,
+      "streak": "W-2"
+    },
+    {
+      "rank": 8,
+      "team": "Augie's Wins",
+      "owner": "Augie",
+      "abbr": "AUG",
+      "color": "#6b4bc4",
+      "record": "4-4-0",
+      "pf": 992.6,
+      "pa": 1078.6,
+      "streak": "W-1"
+    },
+    {
+      "rank": 9,
+      "team": "Val's Pals",
+      "owner": "Val",
+      "abbr": "VAL",
+      "color": "#27c24c",
+      "record": "3-5-0",
+      "pf": 1074.5,
+      "pa": 1111.4,
+      "streak": "L-1"
+    },
+    {
+      "rank": 10,
+      "team": "Sack Dance Nathan",
+      "owner": "Nate",
+      "abbr": "SDN",
+      "color": "#2f5fd0",
+      "record": "3-5-0",
+      "pf": 968.35,
+      "pa": 994.55,
+      "streak": "L-2"
+    },
+    {
+      "rank": 11,
+      "team": "Cats&Stuff",
+      "owner": "Katie",
+      "abbr": "CAT",
+      "color": "#1aa7b8",
+      "record": "2-6-0",
+      "pf": 1066.15,
+      "pa": 1194.5,
+      "streak": "L-5"
+    },
+    {
+      "rank": 12,
+      "team": "Injured Reserves",
+      "owner": "Greg",
+      "abbr": "IR",
+      "color": "#6f8f2e",
+      "record": "0-8-0",
+      "pf": 752.35,
+      "pa": 1053.2,
+      "streak": "L-8"
+    }
+  ]
+}
