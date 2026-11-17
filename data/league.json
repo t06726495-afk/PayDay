@@ -1,34 +1,34 @@
 {
   "league": "GVR",
-  "week": 9,
+  "week": 10,
 
   "matchups": [
-    {"home": {"team": "Hash Marks Aaron", "score": 177.15}, "away": {"team": "Pick 6 Cesar", "score": 149.55}},
-    {"home": {"team": "Injured Reserves", "score": 89.0}, "away": {"team": "Augie's Wins", "score": 107.7}},
-    {"home": {"team": "Cats&Stuff", "score": 127.1}, "away": {"team": "Melissa the Blitz-a", "score": 102.55}},
-    {"home": {"team": "Val's Pals", "score": 108.95}, "away": {"team": "Chef Francisco", "score": 175.9}},
-    {"home": {"team": "Fugitive FC", "score": 113.0}, "away": {"team": "Sack Dance Nathan", "score": 94.15}},
-    {"home": {"team": "Strange things", "score": 179.3}, "away": {"team": "Messi", "score": 128.7}}
+    {"home": {"team": "Hash Marks Aaron", "score": 144.75}, "away": {"team": "Chef Francisco", "score": 178.85}},
+    {"home": {"team": "Augie's Wins", "score": 120.9}, "away": {"team": "Messi", "score": 149.3}},
+    {"home": {"team": "Cats&Stuff", "score": 76.1}, "away": {"team": "Injured Reserves", "score": 123.65}},
+    {"home": {"team": "Val's Pals", "score": 138.45}, "away": {"team": "Melissa the Blitz-a", "score": 194.8}},
+    {"home": {"team": "Fugitive FC", "score": 135.9}, "away": {"team": "Pick 6 Cesar", "score": 52.65}},
+    {"home": {"team": "Strange things", "score": 178.6}, "away": {"team": "Sack Dance Nathan", "score": 89.95}}
   ],
 
   "headlines": [
-    {"tag": "SEVEN STRAIGHT", "title": "Strange things 179.30 – 128.70 Messi", "detail": "Taylor has the week's best score and a seventh straight win. At 8-1, Strange things leads by two games."},
-    {"tag": "FOUR IN A ROW", "title": "Chef Francisco 175.90 – 108.95 Val's Pals", "detail": "Fran wins a fourth straight game and moves up to #2."},
-    {"tag": "LOGJAM AT 6-3", "title": "Hash Marks Aaron 177.15 – 149.55 Pick 6 Cesar", "detail": "Aaron beats Cesar and moves up to #4. Fran, Cesar, Aaron and Johnny are all 6-3."}
+    {"tag": "FIRST WIN", "title": "Injured Reserves 123.65 – 76.10 Cats&Stuff", "detail": "Greg gets his first win of the season and moves to 1-9."},
+    {"tag": "EIGHT STRAIGHT", "title": "Strange things 178.60 – 89.95 Sack Dance Nathan", "detail": "Taylor wins an eighth straight and stays #1 at 9-1."},
+    {"tag": "TOP SCORE", "title": "Melissa the Blitz-a 194.80 – 138.45 Val's Pals", "detail": "Melissa puts up the week's best score and moves up to #6."}
   ],
 
   "teams": [
-    {"rank": 1, "team": "Strange things", "owner": "Taylor", "abbr": "STR", "color": "#8e1b2b", "record": "8-1-0", "pf": 1383.65, "pa": 1177.6, "streak": "W-7"},
-    {"rank": 2, "team": "Chef Francisco", "owner": "Fran", "abbr": "CHF", "color": "#d9a520", "record": "6-3-0", "pf": 1370.75, "pa": 1129.4, "streak": "W-4"},
-    {"rank": 3, "team": "Pick 6 Cesar", "owner": "Cesar", "abbr": "P6C", "color": "#f26b38", "record": "6-3-0", "pf": 1366.95, "pa": 1271.75, "streak": "L-1"},
-    {"rank": 4, "team": "Hash Marks Aaron", "owner": "Aaron", "abbr": "HMA", "color": "#e0b43a", "record": "6-3-0", "pf": 1271.55, "pa": 1148.45, "streak": "W-2"},
-    {"rank": 5, "team": "Fugitive FC", "owner": "Johnny", "abbr": "FFC", "color": "#d7263d", "record": "6-3-0", "pf": 1256.3, "pa": 1117.15, "streak": "W-1"},
-    {"rank": 6, "team": "Augie's Wins", "owner": "Augie", "abbr": "AUG", "color": "#6b4bc4", "record": "5-4-0", "pf": 1100.3, "pa": 1167.6, "streak": "W-2"},
-    {"rank": 7, "team": "Melissa the Blitz-a", "owner": "Melissa", "abbr": "MEL", "color": "#c05bd6", "record": "4-5-0", "pf": 1252.5, "pa": 1383.6, "streak": "L-2"},
-    {"rank": 8, "team": "Messi", "owner": "Colin", "abbr": "MES", "color": "#b8323f", "record": "4-5-0", "pf": 1210.25, "pa": 1244.55, "streak": "L-1"},
-    {"rank": 9, "team": "Cats&Stuff", "owner": "Katie", "abbr": "CAT", "color": "#1aa7b8", "record": "3-6-0", "pf": 1193.25, "pa": 1297.05, "streak": "W-1"},
-    {"rank": 10, "team": "Val's Pals", "owner": "Val", "abbr": "VAL", "color": "#27c24c", "record": "3-6-0", "pf": 1183.45, "pa": 1287.3, "streak": "L-2"},
-    {"rank": 11, "team": "Sack Dance Nathan", "owner": "Nate", "abbr": "SDN", "color": "#2f5fd0", "record": "3-6-0", "pf": 1062.5, "pa": 1107.55, "streak": "L-3"},
-    {"rank": 12, "team": "Injured Reserves", "owner": "Greg", "abbr": "IR", "color": "#6f8f2e", "record": "0-9-0", "pf": 841.35, "pa": 1160.9, "streak": "L-9"}
+    {"rank": 1, "team": "Strange things", "owner": "Taylor", "abbr": "STR", "color": "#8e1b2b", "record": "9-1-0", "pf": 1562.25, "pa": 1267.55, "streak": "W-8"},
+    {"rank": 2, "team": "Chef Francisco", "owner": "Fran", "abbr": "CHF", "color": "#d9a520", "record": "7-3-0", "pf": 1549.6, "pa": 1274.15, "streak": "W-5"},
+    {"rank": 3, "team": "Fugitive FC", "owner": "Johnny", "abbr": "FFC", "color": "#d7263d", "record": "7-3-0", "pf": 1392.2, "pa": 1169.8, "streak": "W-2"},
+    {"rank": 4, "team": "Pick 6 Cesar", "owner": "Cesar", "abbr": "P6C", "color": "#f26b38", "record": "6-4-0", "pf": 1419.6, "pa": 1407.65, "streak": "L-2"},
+    {"rank": 5, "team": "Hash Marks Aaron", "owner": "Aaron", "abbr": "HMA", "color": "#e0b43a", "record": "6-4-0", "pf": 1416.3, "pa": 1327.3, "streak": "L-1"},
+    {"rank": 6, "team": "Melissa the Blitz-a", "owner": "Melissa", "abbr": "MEL", "color": "#c05bd6", "record": "5-5-0", "pf": 1447.3, "pa": 1522.05, "streak": "W-1"},
+    {"rank": 7, "team": "Messi", "owner": "Colin", "abbr": "MES", "color": "#b8323f", "record": "5-5-0", "pf": 1359.55, "pa": 1365.45, "streak": "W-1"},
+    {"rank": 8, "team": "Augie's Wins", "owner": "Augie", "abbr": "AUG", "color": "#6b4bc4", "record": "5-5-0", "pf": 1221.2, "pa": 1316.9, "streak": "L-1"},
+    {"rank": 9, "team": "Val's Pals", "owner": "Val", "abbr": "VAL", "color": "#27c24c", "record": "3-7-0", "pf": 1321.9, "pa": 1482.1, "streak": "L-3"},
+    {"rank": 10, "team": "Cats&Stuff", "owner": "Katie", "abbr": "CAT", "color": "#1aa7b8", "record": "3-7-0", "pf": 1269.35, "pa": 1420.7, "streak": "L-1"},
+    {"rank": 11, "team": "Sack Dance Nathan", "owner": "Nate", "abbr": "SDN", "color": "#2f5fd0", "record": "3-7-0", "pf": 1152.45, "pa": 1286.15, "streak": "L-4"},
+    {"rank": 12, "team": "Injured Reserves", "owner": "Greg", "abbr": "IR", "color": "#6f8f2e", "record": "1-9-0", "pf": 965.0, "pa": 1237.0, "streak": "W-1"}
   ]
 }
